@@ -1,0 +1,116 @@
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.toolbar {
+  background-color: #0d3f7d;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.8), 0 1px 1px 0 rgba(0, 0, 0, 0.5), 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  border: none;
+}
+.page-wrapper {
+  margin: 0 3vw;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 2vw;
+  margin-bottom: 70px;
+}
+.card {
+  width: 30vw;
+  margin-top: 20px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.8), 0 1px 1px 0 rgba(0, 0, 0, 0.5), 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+}
+.card:hover {
+  outline: auto;
+}
+.card:focus {
+  outline: auto;
+}
+.cardRead {
+  background-color: #D8DEE9;
+}
+.cardInner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.cardPart1 {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 65%;
+  
+}
+.cardPart2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 25%;
+}
+.readMark1 {
+  font-size: 12px;
+  font-weight: 700;
+  color: red;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.readMark2 {
+  font-size: 12px;
+  font-weight: 700;
+  color: green;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cardField1 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cardField2 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+.cardFieldTitle {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  color: black;
+  width: 120px;
+}
+.cardImage {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+@media (max-width: 1200px) {
+  .page-wrapper {
+    margin: 0 3vw;
+    margin-bottom: 50px;
+  }
+  .card {
+    width: 45vw;
+    gap: 4vw;
+  }
+}
+@media (max-width: 768px) {
+  .page-wrapper {
+    margin: 0 5vw;
+  }
+  .card {
+    width: 90vw;
+  }
+}
