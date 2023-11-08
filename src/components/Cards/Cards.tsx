@@ -63,7 +63,7 @@ const Cards = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      // addEvents();
+      addEvents();
     }, 5000);
     return () => {
       clearInterval(timer);
