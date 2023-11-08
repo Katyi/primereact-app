@@ -1,7 +1,8 @@
 # Проект -тест для ООО "ГТС"
 Использованы React + TypeScript + Vite + PrimeReact + dayjs
+https://katyi.github.io/primereact-app
 
-Задание:
+# Задание:
 Написать одностраничное приложение Журнал событий.
 Необходимо использовать Vue.js 3 и PrimeVue или React и PrimeReact.
 Предпочтительно
