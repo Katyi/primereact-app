@@ -8,7 +8,6 @@ import { eventsData, importanceArr, equipmentArr, messageArr, responsibleArr, im
 import { Toolbar } from 'primereact/toolbar';
 import { InputText } from 'primereact/inputtext';
 import dayjs from 'dayjs';
-import { Menubar } from 'primereact/menubar';
 
 interface Event {
   id?: any;
@@ -57,8 +56,6 @@ const Cards = () => {
       img: imgArr[randomIndex],
     }]);
     setReadMode(prev1 => [...prev1, false]);
-    console.log(events);
-    console.log(readMode);
   };
 
   useEffect(() => {
@@ -75,11 +72,11 @@ const Cards = () => {
       <Toolbar
         start={
           <div>
-            <h1 style={{color: 'whitesmoke'}}>События</h1>
-            <span style={{color: 'whitesmoke', fontSize: '12px'}}>Для чтения сообщения укажите мышкой на карточку и нажмите пробел</span>
+            <h1 style={{ color: 'whitesmoke' }}>События</h1>
+            <span style={{ color: 'whitesmoke', fontSize: '12px' }}>Для чтения сообщения укажите мышкой на карточку и нажмите пробел</span>
           </div>
         }
-        end={<InputText onChange={event => setQuery(event.target.value)} placeholder="Поиск по сообщениям"/>}
+        end={<InputText onChange={event => setQuery(event.target.value)} placeholder="Поиск по сообщениям" />}
         className='toolbar'
       />
       <div className='page-wrapper'>
@@ -111,22 +108,24 @@ const Cards = () => {
                 </div>
                 <div className='cardPart2'>
                   <div className='cardField2'>
-                    <Image src={item.img} imageClassName='cardImage'/>
+                    <Image src={item.img} imageClassName='cardImage' />
                     <div className='cardFieldValue'>{item.responsible}</div>
                   </div>
                 </div>
               </div>
-              <Divider/>
+              <Divider />
               {!readMode[item.id - 1] && <div className='readMark1'>Не прочтено <i className='pi pi-envelope mr-2'></i></div>}
               {readMode[item.id - 1] && <div className='readMark2'>Прочтено <i className="pi pi-check mr-2"></i></div>}
               <div className='cardField1'>
                 <div className='cardFieldTitle'>Сообщение</div>
                 <div className='cardFieldValue'>{item.message}</div>
-                </div>
+              </div>
             </Card>
           ))}
       </div>
-      <Paginator first={first} rows={rows} totalRecords={events.length} onPageChange={onPageChange} template="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"/>
+      <Paginator first={first} rows={rows} totalRecords={events.length} onPageChange={onPageChange}
+        template="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink" 
+      />
     </div>
   )
 }
